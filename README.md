@@ -1,3 +1,9 @@
+来自当当网的`dubbox`.
+
+ - 更新`maven`为更顺手的`gradle`
+
+-----
+
 Dubbox now means Dubbo eXtensions. If you know java, javax and dubbo, you know what dubbox is :)
 
 Dubbox adds features like RESTful remoting, Kyro/FST serialization, etc to the popular [dubbo service framework](http://github.com/alibaba/dubbo). It's been used by several projects of [dangdang.com](http://www.dangdang.com), which is one of the major e-commerce companies in China.
