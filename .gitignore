@@ -27,6 +27,11 @@ target/
 *.properties~
 *.xml~
 
+# gradle
+.gradle
+build
+classes/
+
 # system ignore
 .DS_Store
 Thumbs.db

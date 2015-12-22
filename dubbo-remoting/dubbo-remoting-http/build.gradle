@@ -1,0 +1,9 @@
+description = 'dubbo-remoting-http'
+dependencies {
+    compile project(':dubbo-common')
+    compile(group: 'org.mortbay.jetty', name: 'jetty', version: '6.1.26') {
+        exclude(module: 'servlet-api')
+    }
+    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core', version: '8.0.11'
+    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-logging-juli', version: '8.0.11'
+}

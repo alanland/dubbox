@@ -1,0 +1,4 @@
+description = 'dubbo-registry-multicast'
+dependencies {
+    compile project(':dubbo-registry:dubbo-registry-api')
+}

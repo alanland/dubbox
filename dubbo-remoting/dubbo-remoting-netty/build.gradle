@@ -1,0 +1,5 @@
+description = 'dubbo-remoting-netty'
+dependencies {
+    compile project(':dubbo-remoting:dubbo-remoting-api')
+    compile group: 'io.netty', name: 'netty', version: '3.7.0.Final'
+}

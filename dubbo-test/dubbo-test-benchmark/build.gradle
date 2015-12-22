@@ -1,0 +1,4 @@
+description = 'dubbo-test-benchmark'
+dependencies {
+    compile project(':dubbo')
+}

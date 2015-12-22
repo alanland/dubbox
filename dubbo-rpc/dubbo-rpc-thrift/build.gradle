@@ -1,0 +1,13 @@
+description = 'dubbo-rpc-thrift'
+dependencies {
+    compile project(':dubbo-rpc:dubbo-rpc-api')
+    compile project(':dubbo-rpc:dubbo-rpc-default')
+    compile project(':dubbo-remoting:dubbo-remoting-api')
+    compile project(':dubbo-remoting:dubbo-remoting-netty')
+    compile(group: 'org.apache.thrift', name: 'libthrift', version: '0.8.0') {
+        exclude(module: 'httpcore')
+    }
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.2.1'
+    testCompile project(':dubbo-config:dubbo-config-spring')
+    testCompile project(':dubbo-registry:dubbo-registry-multicast')
+}

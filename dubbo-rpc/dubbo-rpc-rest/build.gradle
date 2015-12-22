@@ -1,0 +1,12 @@
+description = 'dubbo-rpc-rest'
+dependencies {
+    compile project(':dubbo-rpc:dubbo-rpc-api')
+    compile project(':dubbo-remoting:dubbo-remoting-http')
+    compile group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: '3.0.7.Final'
+    compile group: 'org.jboss.resteasy', name: 'resteasy-client', version: '3.0.7.Final'
+    compile group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'
+    compile group: 'org.jboss.resteasy', name: 'resteasy-netty', version: '3.0.7.Final'
+    compile group: 'org.jboss.resteasy', name: 'resteasy-jdk-http', version: '3.0.7.Final'
+    compile group: 'org.jboss.resteasy', name: 'resteasy-jackson-provider', version: '3.0.7.Final'
+    compile group: 'org.jboss.resteasy', name: 'resteasy-jaxb-provider', version: '3.0.7.Final'
+}

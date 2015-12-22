@@ -1,0 +1,17 @@
+description = 'dubbo-common'
+dependencies {
+    compile group: 'log4j', name: 'log4j', version: '1.2.16'
+    compile group: 'org.javassist', name: 'javassist', version: '3.15.0-GA'
+    compile project(':hessian-lite')
+    testCompile group: 'cglib', name: 'cglib-nodep', version: '2.2'
+
+    // Maven provided scope
+    compile(group: 'org.slf4j', name: 'slf4j-api', version: '1.6.2')
+    compile(group: 'commons-logging', name: 'commons-logging-api', version: '1.1')
+    compile(group: 'com.alibaba', name: 'fastjson', version: '1.1.39')
+    compile(group: 'org.jvnet.sorcerer', name: 'sorcerer-javac', version: '0.8')
+    compile(group: 'com.esotericsoftware.kryo', name: 'kryo', version: '2.24.0')
+    compile(group: 'de.javakaffee', name: 'kryo-serializers', version: '0.26')
+    compile(group: 'de.ruedigermoeller', name: 'fst', version: '1.55')
+    compile(group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.3.3')
+}

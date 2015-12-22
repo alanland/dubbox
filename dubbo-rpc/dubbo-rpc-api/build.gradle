@@ -1,0 +1,4 @@
+description = 'dubbo-rpc-api'
+dependencies {
+    compile project(':dubbo-common')
+}

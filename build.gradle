@@ -1,0 +1,61 @@
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'groovy'
+    apply plugin: 'idea'
+
+    group = 'com.alibaba'
+    version = '2.8.4'
+
+    repositories {
+//    mavenLocal()
+        maven { url "http://localhost:8081/nexus/content/groups/public/" }
+        mavenCentral()
+        maven { url "http://repo.spring.io/libs-release" }
+    }
+}
+
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'groovy'
+    apply plugin: 'idea'
+    sourceCompatibility = 1.5
+    targetCompatibility = 1.5
+
+    task packageSources(type: Jar) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+
+    }
+    artifacts.archives packageSources
+    repositories {
+//    mavenLocal()
+        maven { url "http://localhost:8081/nexus/content/groups/public/" }
+        mavenCentral()
+        maven { url "http://repo.spring.io/libs-release" }
+    }
+
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.10'
+        testCompile group: 'org.easymock', name: 'easymock', version: '3.0'
+        testCompile group: 'org.easymock', name: 'easymockclassextension', version: '3.0'
+        testCompile group: 'com.googlecode.jmockit', name: 'jmockit', version: '0.999.8'
+
+        compile 'org.codehaus.groovy:groovy-all:2.4.1'
+
+        // Maven provided scope
+        compile(group: 'org.slf4j', name: 'slf4j-api', version: '1.6.2')
+        compile(group: 'commons-logging', name: 'commons-logging-api', version: '1.1')
+        compile(group: 'com.alibaba', name: 'fastjson', version: '1.1.39')
+        compile(group: 'org.jvnet.sorcerer', name: 'sorcerer-javac', version: '0.8')
+        compile(group: 'com.esotericsoftware.kryo', name: 'kryo', version: '2.24.0')
+        compile(group: 'de.javakaffee', name: 'kryo-serializers', version: '0.26')
+        compile(group: 'de.ruedigermoeller', name: 'fst', version: '1.55')
+        compile(group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.3.3')
+
+    }
+
+
+}
+

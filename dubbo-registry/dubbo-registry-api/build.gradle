@@ -1,0 +1,5 @@
+description = 'dubbo-registry-api'
+dependencies {
+    compile project(':dubbo-cluster')
+    compile project(':dubbo-container:dubbo-container-api')
+}
