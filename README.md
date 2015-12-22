@@ -1,6 +1,8 @@
 来自当当网的`dubbox`.
 
- - 更新`maven`为更顺手的`gradle`
+ - replace `maven` with `gradle`
+ - `groovy` support
+ - add some groovy demos in `dubbo-demo`
 
 -----
 
